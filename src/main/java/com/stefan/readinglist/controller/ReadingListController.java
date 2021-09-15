@@ -2,6 +2,8 @@ package com.stefan.readinglist.controller;
 
 import com.stefan.readinglist.entity.Book;
 import com.stefan.readinglist.repository.ReadingListRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,9 @@ import java.util.List;
 public class ReadingListController {
 
     private String associateId;
+
+    //get a logger here
+    private Logger logger= LoggerFactory.getLogger(ReadingListController.class);
 
     @Autowired
     private ReadingListRepository readingListRepository;
